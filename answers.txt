@@ -1,0 +1,110 @@
+1)
+A- Count how many values in the list equal zero.
+B-
+int x = 0;
+for (int a : arr)
+{
+    if (a == 0)
+        x++;
+}
+return x;
+2)
+A- Find the minimum value in a list
+B-
+int y = arr.get(0);
+for (int j = 1; j < arr.size(); j++)
+{
+    if (arr.get(j) < y)
+        y = arr.get(j);
+}
+3)
+A- Find the average in a list.
+B-
+double y = 0;
+for (double a : arr)
+    y += a;
+return y/arr.size();
+4)
+A- Check if a value is in a list.
+B-
+int x = 0;
+boolean b = false;
+while (!b && (x < arr.size()))
+{
+    if (arr.get(x) == 0)
+        b = true;
+    x++;
+}
+return b;
+5)
+A- Returns the list backwards
+B-
+for (int j = 0; j < arr.size()/2; j++)
+{
+    int a = arr.get(j);
+    arr.set(j, arr.get(arr.size()-1-j));
+    arr.set(arr.size()-j-1, a);
+}
+return arr;
+6)
+A- Returns the sum of the numbers in the list
+B-
+int x = 0;
+for (int n = 0; n < arr.size(); n++)
+    x += arr.get(n);
+return x;
+7)
+A- Returns the index in z that has the highest value
+B-
+int x = 0;
+int y = 0;
+ArrayList<int> z = new ArrayList<int>();
+for (int a : arr)
+{
+    z.get(a)++;
+    if (z.get(a) > x)
+    {
+        x = z.get(a);
+        y = a;
+    }
+}
+return y;
+8)
+A- For every two numbers it switches them
+B-
+for (int i = 0; i < arr.size() - 1; i += 2)
+{
+    int a = arr.get(i);
+    arr.set(i, arr.get(i+1));
+    arr.set(i+1, a);
+}
+return arr;
+9)
+A- Checks if the list has an non positive numbers
+B-
+boolean b = true;
+for (int a : arr)
+{
+    if (a <= 0)
+        b = false;
+}
+return b;
+10)
+A- Moves the last index to the front of the list
+B-
+for (int k = arr.size(); k > 1; k--)
+{
+    int a = arr.get(k-2);
+    arr.set(k-2, arr.get(k-1));
+    arr.set(k-1, a);
+}
+11)
+A- Returns the greatest number in the list
+B-
+int n = arr.get(0);
+for (int i = 1; i < arr.size(); i++)
+{
+    if (arr.get(i) > n)
+        n = arr.get(i);
+}
+return n;
